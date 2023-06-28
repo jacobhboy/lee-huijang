@@ -1,9 +1,14 @@
 .deadWorker {
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 60px;
     width: 100%;
     color: white;
     background-color: #00ADB5;
+}
+
+.worker {
+    display: inline-block;
+    align-items: center;
+    margin: 5px 10px;
 }

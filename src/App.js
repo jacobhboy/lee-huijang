@@ -7,12 +7,15 @@ import axios from "axios";
 
 function App() {
   const [workers, setWorkers] = useState([]);
-  const [deadWorkerName, setDeadWorkerName] = useState([]);
+  const [livingWorkerName, setLivingWorkerName] = useState([]);
 
   useEffect(() => {
     fetchData();
-    setupDeadWorkerName();
   }, []);
+
+  useEffect(() => {
+    setupLivingWorkerName();
+  }, [workers]);
 
   const fetchData = async () => {
     try {
@@ -29,10 +32,11 @@ function App() {
     }
   };
 
-  const setupDeadWorkerName = async () => {
+  const setupLivingWorkerName = async () => {
     try {
-      const deadWorkersNameTemp = workers.map((item) => item.worker);
-      setDeadWorkerName(deadWorkersNameTemp);
+      const i = workers.map((item) => item.worker);
+      console.log(i);
+      setLivingWorkerName(i);
     } catch (error) {
       console.log(error);
     }
@@ -41,8 +45,8 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <DeadWorker deadWorkerName={deadWorkerName} />
       <div className="container">
+        <DeadWorker livingWorkerName={livingWorkerName} />
         {workers.map((worker, index) => (
           <Box key={`BOX ${index}`} worker={worker} />
         ))}

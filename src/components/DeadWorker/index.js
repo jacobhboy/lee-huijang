@@ -48,12 +48,13 @@ let list = [
   "nL2",
 ];
 
-export default function DeadWorker({ deadWorkerName }) {
-  const workerList = list.filter((x) => !deadWorkerName.includes(x));
+export default function DeadWorker({ livingWorkerName }) {
+  let workerList = list.filter((x) => !livingWorkerName.includes(x));
+
   return (
     <div className="deadWorker">
       {workerList.map((worker) => (
-        <span>{worker + "\0\0"}</span>
+        <p className="worker">{worker}</p>
       ))}
     </div>
   );
