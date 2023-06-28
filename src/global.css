@@ -1,12 +1,9 @@
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow: hidden;
   }
-  p {
-    display: inline-block;
-  }
+
   a{
     text-decoration: none;
     color: inherit;
