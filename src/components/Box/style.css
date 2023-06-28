@@ -1,16 +1,16 @@
 .box {
     text-align: left;
     display: inline-block;
-    border: 1px solid grey;
-    width: 250px;
+    border: none;
+    background-color: #EEEEEE;
+    border-radius: 7%;
+    width: 275px;
     margin: 16px;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .pTitle {
-    color: darkgrey;
+    color: #0D7377;
     line-height: 25px;
 }
-
-
-
-/* '3070frti','66XT01','66XT02','67XT01','67xt3g51n',' 67xt5g2',' 67xt5g51n',' 67XT7gpu1','8n1','8n10','8n11','8n12','8n13','8n2','8n3','8n4','8n5','8N6','8n7','8n8','8n9','H801','H802','L01','L02','L03','L04','LOS','L06','L07','n04','n1','N10','n11','n12','n13','n14','n15','n3','n5','n6','n7','n8','n9','nL2'' */

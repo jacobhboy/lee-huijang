@@ -1,7 +1,6 @@
 import "./style.css";
 
 export default function Box({ worker }) {
-  console.log(worker);
   return (
     <div className="box">
       <h1>

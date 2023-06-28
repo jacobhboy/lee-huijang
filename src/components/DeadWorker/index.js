@@ -52,9 +52,9 @@ export default function DeadWorker({ deadWorkerName }) {
   const workerList = list.filter((x) => !deadWorkerName.includes(x));
   return (
     <div className="deadWorker">
-      {workerList.map((worker) => {
-        <span>{worker}</span>;
-      })}
+      {workerList.map((worker) => (
+        <span>{worker + "\0\0"}</span>
+      ))}
     </div>
   );
 }

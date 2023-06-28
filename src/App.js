@@ -41,13 +41,11 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <div className="main">
-        <div className="container">
-          <DeadWorker deadWorkerName={deadWorkerName} />
-          {workers.map((worker, index) => (
-            <Box key={`BOX ${index}`} worker={worker} />
-          ))}
-        </div>
+      <DeadWorker deadWorkerName={deadWorkerName} />
+      <div className="container">
+        {workers.map((worker, index) => (
+          <Box key={`BOX ${index}`} worker={worker} />
+        ))}
       </div>
     </div>
   );
