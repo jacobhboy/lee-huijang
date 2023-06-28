@@ -20,7 +20,7 @@ function App() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "/api/qp5x7acdh0nszyqya7g6u724qknr7vp40rzq6ee7vr3lxkcnmnjv6q53g4zfh/"
+        "https://kaspa.acc-pool.pw/api/qp5x7acdh0nszyqya7g6u724qknr7vp40rzq6ee7vr3lxkcnmnjv6q53g4zfh/"
       );
       const data = response.data.result.workers;
       const sortedWorkers = data.sort((a, b) =>
